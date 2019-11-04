@@ -2,8 +2,6 @@ FROM httpd:2.4
 
 COPY power /usr/local/apache2/htdocs/
 
-LABEL maintainer= "Fulano de Tal"
-
 HEALTHCHECK --interval=5s \
             --timeout=5s \
             CMD curl -f http://127.0.0.1:80 || exit 1
